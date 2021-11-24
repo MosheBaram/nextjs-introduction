@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import Head from "../../../components/head";
 import Nav from "../../../components/nav";
 
-export default function blog() {
+const Blog = () => {
   const router = useRouter();
 
   return (
@@ -23,4 +23,6 @@ export default function blog() {
       `}</style>
     </>
   );
-}
+};
+
+export default Blog;
