@@ -29,17 +29,17 @@ const Nav = () => (
         </Link>
       </li>
       <li>
-        <Link href="/sw/4">
-          <a>DV</a>
+        <Link href="/rnm/2">
+          <a>MR</a>
         </Link>
       </li>
       <li>
-        <Link href="/sw/10">
-          <a>OWK</a>
+        <Link href="/rnm/265">
+          <a>PR</a>
         </Link>
       </li>
       <li>
-        <Link href={`/sw/random`}>
+        <Link href={`/rnm/random`}>
           <a>Random</a>
         </Link>
       </li>

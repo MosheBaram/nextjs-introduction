@@ -1,6 +1,7 @@
 import Head from "../components/head";
 import Nav from "../components/nav";
 import fetch from "isomorphic-unfetch";
+import axios from "axios";
 
 const CallApi = ({ name, url }) => {
   return (
@@ -10,7 +11,7 @@ const CallApi = ({ name, url }) => {
         <Nav />
 
         <div>
-          Api Response from URL {url}: {name}
+          Api Response from URL {url}: {name ?? "Error: No response received"}
         </div>
       </div>
 
@@ -26,9 +27,10 @@ const CallApi = ({ name, url }) => {
 
 CallApi.getInitialProps = async () => {
   const url = `https://nextjs-introduction-azure.vercel.app/api/hello`;
-  const res = await fetch(url);
-  const { name } = await res.json();
-  return { name, url };
+  const res = await axios.get(url);
+  const { data } = res;
+  const { name } = data;
+  return { url, name };
 };
 
 export default CallApi;

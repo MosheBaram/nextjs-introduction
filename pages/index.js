@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css";
 import Nav from "../components/nav";
 import Layout from "../components/Layout";
 
-export default function Home() {
+const Home = () => {
   return (
     <div className={styles.container}>
       <Layout pageTitle="Next.js Introduction - Demo Index Page">
@@ -71,4 +71,6 @@ export default function Home() {
       </Layout>
     </div>
   );
-}
+};
+
+export default Home;
