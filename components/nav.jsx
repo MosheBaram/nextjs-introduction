@@ -19,7 +19,7 @@ const Nav = () => (
         </Link>
       </li>
       <li>
-        <Link href="/blog/123456/Tweakers%20Developers%20Summit">
+        <Link href="/blog/123456/RaboBank%20Frontend%20Community">
           <a>Blog Post 1</a>
         </Link>
       </li>
