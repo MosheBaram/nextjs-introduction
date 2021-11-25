@@ -1,8 +1,8 @@
 import Head from "../components/head";
 import Nav from "../components/nav";
-import fetch from "isomorphic-unfetch";
+import axios from "axios";
 
-const Page = props => (
+const Page = (props) => (
   <>
     <div className="hero">
       <Head title="Page" />
@@ -28,9 +28,9 @@ const Page = props => (
 
 Page.getInitialProps = async ({ req }) => {
   console.log("Page.getInitialProps");
-  const res = await fetch("https://api.github.com/repos/zeit/next.js");
-  const json = await res.json();
-  const stars = json.stargazers_count;
+  const res = await axios.get("https://api.github.com/repos/vercel/next.js");
+  const { data } = res;
+  const { stargazers_count: stars } = data;
   return { stars };
 };
 

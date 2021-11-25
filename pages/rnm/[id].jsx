@@ -40,7 +40,6 @@ rnm.getInitialProps = async ({ query }) => {
   const res = await axios.get(url);
   const { data } = res;
 
-  console.log(data);
   return { data };
 };
 
