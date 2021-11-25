@@ -4,15 +4,17 @@ import Nav from "../../../components/nav";
 
 const Blog = () => {
   const router = useRouter();
+  const { query } = router;
+  const { someprop, id } = query;
 
   return (
     <>
       <div className="hero">
-        <Head title={router.query?.someprop} />
+        <Head title={someprop} />
         <Nav />
 
-        <h1>{`Blog Post ID: ${router.query?.id}`}</h1>
-        <p>Page name: {router.query?.someprop}</p>
+        <h1>{`Blog Post ID: ${id}`}</h1>
+        <p>Page name: {someprop}</p>
       </div>
 
       <style jsx>{`
