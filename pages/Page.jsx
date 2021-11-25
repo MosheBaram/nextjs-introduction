@@ -2,13 +2,13 @@ import Head from "../components/head";
 import Nav from "../components/nav";
 import axios from "axios";
 
-const Page = (props) => (
+const Page = ({ stars }) => (
   <>
     <div className="hero">
       <Head title="Page" />
       <Nav />
-      Next stars: {props?.stars ?? ":-("}
-      {console.log(`Render Page: ${props?.stars}`)}
+      Next stars: {stars ?? ":-("}
+      {console.log(`Render Page: ${stars}`)}
     </div>
 
     <style jsx>{`
